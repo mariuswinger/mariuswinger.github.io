@@ -72,6 +72,9 @@
   .prose a {
     @apply text-accent underline underline-offset-4 hover:text-accent-soft;
   }
+  .prose a.cite {
+    @apply inline-block rounded-md bg-accent/10 px-1.5 py-0.5 align-baseline text-[0.8em] font-medium leading-none whitespace-nowrap no-underline hover:bg-accent/20 hover:text-accent;
+  }
   .prose :where(ul, ol) {
     @apply my-4 pl-6;
   }
