@@ -6,7 +6,17 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!dist", "!.astro", "!bun.lock", "!public"]
+    "includes": [
+      "**",
+      "!dist",
+      "!.astro",
+      "!bun.lock",
+      "!public",
+      "!**/*.md",
+      "!**/*.mdx",
+      "!**/*.yml",
+      "!**/*.yaml"
+    ]
   },
   "formatter": {
     "enabled": true,
