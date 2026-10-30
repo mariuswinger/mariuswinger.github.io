@@ -5,24 +5,28 @@ import Layout from '../layouts/Layout.astro';
 
 const services: { title: string; description: string; icon: IconName }[] = [
   {
-    title: 'Web Development',
-    description: 'High-quality development of sites and apps at a professional level.',
-    icon: 'code',
-  },
-  {
     title: 'Backend & APIs',
-    description: 'Robust, well-tested services and integrations.',
+    description:
+      'Designing and building REST APIs with FastAPI for large datasets and cloud infrastructure, with clean architecture and domain-driven design.',
     icon: 'server',
   },
   {
-    title: 'Tooling & Automation',
-    description: 'CI/CD, developer experience and infrastructure as code.',
-    icon: 'cog',
+    title: 'Full-stack Development',
+    description:
+      'From backend services to frontend applications in TypeScript and React, including performance optimisation and modernisation of existing systems.',
+    icon: 'code',
   },
   {
-    title: 'Consulting',
-    description: 'Architecture reviews, mentoring and technical guidance.',
+    title: 'R&D to Production',
+    description:
+      'Turning prototypes and mathematical models into robust, tested software where precision, performance, security and stability matter.',
     icon: 'bulb',
+  },
+  {
+    title: 'Cloud & Delivery',
+    description:
+      'Docker, Kubernetes and Azure for deploying and orchestrating software, with testing of distributed systems and modern AI-assisted workflows.',
+    icon: 'cog',
   },
 ];
 ---
@@ -32,12 +36,20 @@ const services: { title: string; description: string; icon: IconName }[] = [
 
   <div class="space-y-4 text-muted leading-relaxed">
     <p>
-      I'm a software developer based in Trondheim, Norway. I enjoy turning complex problems into simple,
-      robust and maintainable software.
+      I am a fullstack developer (heavy on the backend) with more than five years of industrial 
+      experience in software development. I hold a master's degree in mathematics and have experience
+      with doing academic research. I often work at the intersection of R&D, domain expertise and 
+      software engineering, turning prototypes and models into robust applications where precision, 
+      performance, security and stability are key.
     </p>
     <p>
-      My work spans the full stack, from backend services and APIs to polished frontends, with a
-      strong focus on developer experience, automation and shipping things that last.
+      I have broad experience across backend and frontend problems, and can contribute with
+      everything from performance optimisation and industrialising prototypes to API development
+      and the accompanying frontend.
+    </p>
+    <p>
+      I thrive on cross-disciplinary collaboration and sharing my knowledge. I also really enjoy
+      exploring new domains, the more complex, the better. 
     </p>
   </div>
 
