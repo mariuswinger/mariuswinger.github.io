@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@theme {
+  --color-bg: #0f0f12;
+  --color-surface: #1e1e22;
+  --color-surface-2: #27272c;
+  --color-border: #38383f;
+  --color-text: #fafafa;
+  --color-muted: #a3a3ad;
+  --color-accent: #f7b733;
+  --color-accent-soft: #ffd166;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-card: 1.5rem;
+  --radius-tile: 1.25rem;
+}
+
+@layer base {
+  html {
+    @apply bg-bg font-sans text-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent text-bg;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-card border border-border bg-surface shadow-[0_24px_80px_-20px_rgba(0,0,0,0.6)];
+  }
+
+  .tile {
+    @apply rounded-tile border border-border bg-surface-2 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)];
+  }
+
+  .section-title {
+    @apply mb-8 text-3xl font-semibold tracking-tight;
+  }
+
+  .section-title::after {
+    content: "";
+    @apply mt-3 block h-1 w-10 rounded-full bg-accent;
+  }
+
+  .subsection-title {
+    @apply mb-5 text-xl font-semibold;
+  }
+}
