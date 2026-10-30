@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Project 2 placeholder">
+  <rect width="400" height="260" rx="24" fill="#27272c"/>
+  <rect x="40" y="48" width="320" height="24" rx="8" fill="#6ee7b7" opacity="0.9"/>
+  <rect x="40" y="96" width="200" height="16" rx="6" fill="#38383f"/>
+  <rect x="40" y="128" width="260" height="16" rx="6" fill="#38383f"/>
+  <rect x="40" y="176" width="120" height="36" rx="10" fill="#6ee7b7" opacity="0.35"/>
+</svg>

@@ -1,0 +1,17 @@
+---
+import ProjectFilter, { type Project } from '../components/ProjectFilter';
+import { FULL_NAME } from '../consts';
+import Layout from '../layouts/Layout.astro';
+
+const projects: Project[] = [
+  { title: 'Project One', category: 'Web development', image: '/images/project-1.svg', href: '#' },
+  { title: 'Project Two', category: 'Applications', image: '/images/project-2.svg', href: '#' },
+  { title: 'Project Three', category: 'Open source', image: '/images/project-3.svg', href: '#' },
+  { title: 'Project Four', category: 'Web development', image: '/images/project-4.svg', href: '#' },
+];
+---
+
+<Layout title="Portfolio" description={`Selected projects of ${FULL_NAME}.`}>
+  <h2 class="section-title">Portfolio</h2>
+  <ProjectFilter projects={projects} client:visible />
+</Layout>
