@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Advent of Code">
+  <rect width="400" height="260" rx="24" fill="#27272c"/>
+  <rect x="24" y="24" width="352" height="212" rx="14" fill="#0f0f12" stroke="#38383f"/>
+  <g fill="#f7b733" opacity="0.9">
+    <circle cx="70" cy="70" r="2"/><circle cx="330" cy="60" r="2.5"/><circle cx="290" cy="110" r="1.5"/>
+    <circle cx="110" cy="190" r="2"/><circle cx="340" cy="200" r="2"/><circle cx="60" cy="140" r="1.5"/>
+  </g>
+  <g fill="none" stroke="#6ee7b7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 70 L160 120 H240 Z"/>
+    <path d="M200 100 L150 160 H250 Z"/>
+    <path d="M200 135 L140 205 H260 Z"/>
+  </g>
+  <rect x="190" y="200" width="20" height="18" rx="3" fill="#f7b733"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a3a3ad">
+    <text x="44" y="226"><tspan fill="#f7b733">$</tspan> python main.py --day 1</text>
+    <text x="240" y="226" fill="#f7b733">★★</text>
+  </g>
+</svg>
