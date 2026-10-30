@@ -1,9 +1,62 @@
 ---
-import { SITE_DESCRIPTION } from '../consts';
+import Icon, { type IconName } from '../components/Icon.astro';
+import { FULL_NAME } from '../consts';
 import Layout from '../layouts/Layout.astro';
+
+const services: { title: string; description: string; icon: IconName }[] = [
+  {
+    title: 'Web Development',
+    description: 'High-quality development of sites and apps at a professional level.',
+    icon: 'code',
+  },
+  {
+    title: 'Backend & APIs',
+    description: 'Robust, well-tested services and integrations.',
+    icon: 'server',
+  },
+  {
+    title: 'Tooling & Automation',
+    description: 'CI/CD, developer experience and infrastructure as code.',
+    icon: 'cog',
+  },
+  {
+    title: 'Consulting',
+    description: 'Architecture reviews, mentoring and technical guidance.',
+    icon: 'bulb',
+  },
+];
 ---
 
-<Layout title="About" description={SITE_DESCRIPTION}>
+<Layout title="About" description={`Personal website and portfolio of ${FULL_NAME}`}>
   <h2 class="section-title">About Me</h2>
-  <p class="text-muted">Coming soon.</p>
+
+  <div class="space-y-4 text-muted leading-relaxed">
+    <p>
+      I'm a software developer based in Trondheim, Norway. I enjoy turning complex problems into simple,
+      robust and maintainable software.
+    </p>
+    <p>
+      My work spans the full stack, from backend services and APIs to polished frontends, with a
+      strong focus on developer experience, automation and shipping things that last.
+    </p>
+  </div>
+
+  <section class="mt-12" aria-labelledby="what-im-doing">
+    <h3 id="what-im-doing" class="subsection-title">What I'm Doing</h3>
+    <ul class="grid gap-5 sm:grid-cols-2">
+      {
+        services.map((s) => (
+          <li class="tile flex gap-5">
+            <span class="grid size-12 shrink-0 place-items-center rounded-xl bg-surface text-accent">
+              <Icon name={s.icon} class="size-6" />
+            </span>
+            <div>
+              <h4 class="font-semibold">{s.title}</h4>
+              <p class="mt-1 text-sm text-muted leading-relaxed">{s.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 </Layout>
