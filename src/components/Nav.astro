@@ -1,0 +1,37 @@
+---
+const nav = [
+  { label: 'About', href: '/' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const { pathname } = Astro.url;
+const isActive = (href: string) =>
+  href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
+---
+
+<nav
+  aria-label="Primary"
+  class="fixed inset-x-0 bottom-0 z-20 border-t border-border bg-surface/90 backdrop-blur lg:absolute lg:inset-x-auto lg:top-0 lg:right-0 lg:bottom-auto lg:rounded-tr-card lg:rounded-bl-card lg:border-t-0 lg:border-b lg:border-l"
+>
+  <ul class="flex justify-around px-2 py-3 lg:gap-8 lg:px-10 lg:py-5">
+    {
+      nav.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+            class:list={[
+              'text-xs font-medium lg:text-sm',
+              isActive(item.href) ? 'text-accent' : 'text-muted hover:text-text',
+            ]}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

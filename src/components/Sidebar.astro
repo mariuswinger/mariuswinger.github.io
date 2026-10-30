@@ -1,0 +1,85 @@
+---
+import { FULL_NAME } from '../consts';
+import Icon, { type IconName } from './Icon.astro';
+
+const profile = {
+  name: FULL_NAME,
+  role: 'Software Developer',
+  avatar: '/images/avatar.svg',
+  email: 'hello@example.com',
+  phone: '+47 000 00 000',
+  birthday: 'November, 1990',
+  location: 'Trondheim, Norway',
+};
+
+const socials: { label: string; href: string; icon: IconName }[] = [
+  { label: 'GitHub', href: 'https://github.com/mariuswinger', icon: 'github' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mariuswinger', icon: 'linkedin' },
+];
+
+const details: { icon: IconName; label: string; value: string; href?: string }[] = [
+  { icon: 'mail', label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
+  {
+    icon: 'phone',
+    label: 'Phone',
+    value: profile.phone,
+    href: `tel:${profile.phone.replace(/\s/g, '')}`,
+  },
+  { icon: 'calendar', label: 'Birthday', value: profile.birthday },
+  { icon: 'pin', label: 'Location', value: profile.location },
+];
+---
+
+<aside class="card flex flex-col items-center px-6 py-8 lg:sticky lg:top-8">
+  <img
+    src={profile.avatar}
+    alt={profile.name}
+    width="120"
+    height="120"
+    class="size-24 rounded-3xl bg-surface-2 object-cover lg:size-32"
+  />
+  <h1 class="mt-5 text-center text-xl font-semibold tracking-tight">{profile.name}</h1>
+  <p class="mt-2 rounded-lg bg-surface-2 px-3 py-1 text-xs text-muted">{profile.role}</p>
+
+  <hr class="my-7 w-full border-border" />
+
+  <ul class="w-full space-y-4">
+    {
+      details.map((d) => (
+        <li class="flex items-center gap-4">
+          <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-surface-2 text-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+            <Icon name={d.icon} class="size-4" />
+          </span>
+          <div class="min-w-0">
+            <p class="text-[0.65rem] uppercase tracking-wider text-muted">{d.label}</p>
+            {d.href ? (
+              <a href={d.href} class="block truncate text-sm hover:text-accent">
+                {d.value}
+              </a>
+            ) : (
+              <p class="truncate text-sm">{d.value}</p>
+            )}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  <ul class="mt-6 flex gap-4">
+    {
+      socials.map((s) => (
+        <li>
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            class="text-muted hover:text-accent"
+          >
+            <Icon name={s.icon} class="size-5" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>
