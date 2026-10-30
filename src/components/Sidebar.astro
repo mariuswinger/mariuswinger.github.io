@@ -1,11 +1,12 @@
 ---
+import { Image } from 'astro:assets';
+import avatar from '../assets/avatar.jpg';
 import { FULL_NAME } from '../consts';
 import Icon, { type IconName } from './Icon.astro';
 
 const profile = {
   name: FULL_NAME,
   role: 'Software Developer',
-  avatar: '/images/avatar.svg',
   email: 'hello@example.com',
   phone: '+47 000 00 000',
   birthday: 'November, 1990',
@@ -31,11 +32,12 @@ const details: { icon: IconName; label: string; value: string; href?: string }[]
 ---
 
 <aside class="card flex flex-col items-center px-6 py-8 lg:sticky lg:top-8">
-  <img
-    src={profile.avatar}
+  <Image
+    src={avatar}
     alt={profile.name}
-    width="120"
-    height="120"
+    width={256}
+    height={256}
+    densities={[1, 2]}
     class="size-24 rounded-3xl bg-surface-2 object-cover lg:size-32"
   />
   <h1 class="mt-5 text-center text-xl font-semibold tracking-tight">{profile.name}</h1>
