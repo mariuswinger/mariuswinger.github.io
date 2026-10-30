@@ -1,0 +1,67 @@
+---
+import Timeline, { type TimelineItem } from '../components/Timeline.astro';
+import { FULL_NAME } from '../consts';
+import Layout from '../layouts/Layout.astro';
+
+const education: TimelineItem[] = [
+  {
+    title: 'University of Somewhere',
+    period: '2010 — 2015',
+    description: 'M.Sc. in Computer Science. Thesis on something interesting.',
+  },
+  {
+    title: 'Another School',
+    period: '2007 — 2010',
+    description: 'Studied things, learned things, built things.',
+  },
+];
+
+const experience: TimelineItem[] = [
+  {
+    title: 'Senior Developer — Some Company',
+    period: '2020 — Present',
+    description: 'Leading development of web platforms and internal tooling.',
+  },
+  {
+    title: 'Developer — Previous Company',
+    period: '2015 — 2020',
+    description: 'Built and shipped full-stack products with a small team.',
+  },
+];
+
+const skills: { level: string; items: string[] }[] = [
+  { level: 'Daily drivers', items: ['TypeScript', 'React', 'Node.js', 'Git'] },
+  { level: 'Comfortable with', items: ['Python', 'PostgreSQL', 'Docker', 'Tailwind CSS'] },
+  { level: 'Some experience', items: ['Go', 'Kubernetes', 'GraphQL'] },
+  { level: 'Currently learning', items: ['Rust', 'Astro'] },
+];
+---
+
+<Layout title="Resume" description={`Education, experience and skills of ${FULL_NAME}`}>
+  <h2 class="section-title">Resume</h2>
+
+  <div class="space-y-12">
+    <Timeline heading="Experience" icon="briefcase" items={experience} />
+    <Timeline heading="Education" icon="book" items={education} />
+
+    <section aria-labelledby="skills">
+      <h3 id="skills" class="subsection-title">My Skills</h3>
+      <dl class="tile space-y-6">
+        {
+          skills.map((group) => (
+            <div>
+              <dt class="text-sm font-medium text-accent">{group.level}</dt>
+              <dd class="mt-2 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span class="rounded-lg border border-border bg-surface px-3 py-1 text-sm">
+                    {item}
+                  </span>
+                ))}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+  </div>
+</Layout>
