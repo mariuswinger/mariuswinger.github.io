@@ -3,37 +3,100 @@ import Timeline, { type TimelineItem } from '../components/Timeline.astro';
 import { FULL_NAME } from '../consts';
 import Layout from '../layouts/Layout.astro';
 
-const education: TimelineItem[] = [
+const experience: TimelineItem[] = [
   {
-    title: 'University of Somewhere',
-    period: '2010 — 2015',
-    description: 'M.Sc. in Computer Science. Thesis on something interesting.',
+    title: 'Consultant — XLENT Trondheim',
+    period: 'Nov 2026 — Present',
+    description:
+      'Consultant and fullstack developer with deep mathematical expertise and experience from professional software development for industrial environments.',
   },
   {
-    title: 'Another School',
-    period: '2007 — 2010',
-    description: 'Studied things, learned things, built things.',
+    title: 'Consultant — Bouvet Trondheim',
+    period: 'Aug 2021 — Oct 2026',
+    description:
+      "Primarily on assignment at Equinor's research centre at Rotvoll as a fullstack developer. Development of research applications, code modernisation and numerical computations.",
+  },
+  {
+    title: 'PhD Candidate — NTNU, Department of Teacher Education',
+    period: 'Jan 2017 — Jul 2021',
+    description:
+      'Research on fraction understanding among student teachers. Combined literature review, existing theory and mathematical models to conceptualise and measure understanding.',
+  },
+  {
+    title: 'University Lecturer (temporary) — NTNU, Department of Teacher Education',
+    period: 'Aug 2016 — Feb 2017',
+    description: 'Taught introductory mathematics courses for student teachers.',
   },
 ];
 
-const experience: TimelineItem[] = [
+const education: TimelineItem[] = [
   {
-    title: 'Senior Developer — Some Company',
-    period: '2020 — Present',
-    description: 'Leading development of web platforms and internal tooling.',
+    title: 'B.Sc. in Computer Science — NTNU',
+    period: 'Aug 2015 — Jan 2017',
+    description: 'Completed the first three semesters before switching to the PhD programme.',
   },
   {
-    title: 'Developer — Previous Company',
-    period: '2015 — 2020',
-    description: 'Built and shipped full-stack products with a small team.',
+    title: 'M.Sc. in Mathematics (Analysis) — NTNU',
+    period: 'Aug 2013 — Jul 2015',
+    description:
+      'Thesis: "A categorical approach to Cuntz–Pimsner C*-algebras", using category theory to give a new, simple proof of a uniqueness theorem. GPA: A.',
+  },
+  {
+    title: 'B.Sc. in Mathematics — NTNU',
+    period: 'Aug 2009 — Jul 2013',
+    description: 'Including an extra year of additional credits.',
   },
 ];
 
 const skills: { level: string; items: string[] }[] = [
-  { level: 'Daily drivers', items: ['TypeScript', 'React', 'Node.js', 'Git'] },
-  { level: 'Comfortable with', items: ['Python', 'PostgreSQL', 'Docker', 'Tailwind CSS'] },
-  { level: 'Some experience', items: ['Go', 'Kubernetes', 'GraphQL'] },
-  { level: 'Currently learning', items: ['Rust', 'Astro'] },
+  {
+    level: 'Daily drivers',
+    items: [
+      'Python',
+      'FastAPI',
+      'Docker',
+      'Git',
+      'GitHub',
+      'GitHub Actions',
+      'REST APIs',
+      'TypeScript',
+      'Mathematics',
+      'Numpy',
+      'Communication',
+      'React',
+    ],
+  },
+  {
+    level: 'Comfortable with',
+    items: [
+      'Kubernetes',
+      'Microsoft Azure',
+      'MongoDB',
+      'Clean architecture',
+      'Domain-driven design',
+      'Software testing',
+      'Agile development',
+      'OAuth',
+      'Security',
+      'AI agents',
+      'AI-assisted development',
+    ],
+  },
+  {
+    level: 'Some experience',
+    items: [
+      'Go',
+      'Rust',
+      'lua',
+      '.NET',
+      'C#',
+      'Fortran',
+      'C++',
+      'MATLAB',
+      'AI & machine learning',
+      'Cloud architecture',
+    ],
+  },
 ];
 ---
 
