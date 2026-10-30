@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="perfect-gpg-keypair terminal">
+  <rect width="400" height="260" rx="24" fill="#27272c"/>
+  <rect x="24" y="24" width="352" height="212" rx="14" fill="#0f0f12" stroke="#38383f"/>
+  <circle cx="46" cy="44" r="5" fill="#fda4af"/>
+  <circle cx="64" cy="44" r="5" fill="#f7b733"/>
+  <circle cx="82" cy="44" r="5" fill="#6ee7b7"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" fill="#a3a3ad">
+    <text x="44" y="84"><tspan fill="#f7b733">$</tspan> perfect-gpg-keypair</text>
+    <text x="44" y="110"><tspan fill="#6ee7b7">✓</tspan> master key   RSA4096</text>
+    <text x="44" y="134"><tspan fill="#6ee7b7">✓</tspan> signing key  RSA4096</text>
+    <text x="44" y="158"><tspan fill="#6ee7b7">✓</tspan> revocation certificate</text>
+    <text x="44" y="190" fill="#f7b733">? Backed up your keys?  › Yes</text>
+  </g>
+</svg>

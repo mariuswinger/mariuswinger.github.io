@@ -3,6 +3,7 @@ import { useState } from 'react';
 export type Project = {
   title: string;
   category: string;
+  description?: string;
   image: string;
   href?: string;
 };
@@ -38,7 +39,12 @@ export default function ProjectFilter({ projects }: Props) {
       <ul className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {visible.map((p) => (
           <li key={p.title}>
-            <a href={p.href ?? '#'} className="group block">
+            <a
+              href={p.href ?? '#'}
+              target={p.href?.startsWith('http') ? '_blank' : undefined}
+              rel={p.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="group block"
+            >
               <div className="overflow-hidden rounded-2xl border border-border">
                 <img
                   src={p.image}
@@ -51,6 +57,9 @@ export default function ProjectFilter({ projects }: Props) {
               </div>
               <h3 className="mt-3 font-medium group-hover:text-accent">{p.title}</h3>
               <p className="text-sm text-muted">{p.category}</p>
+              {p.description && (
+                <p className="mt-2 text-sm text-muted leading-relaxed">{p.description}</p>
+              )}
             </a>
           </li>
         ))}

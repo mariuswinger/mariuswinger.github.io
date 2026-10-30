@@ -4,10 +4,14 @@ import { FULL_NAME } from '../consts';
 import Layout from '../layouts/Layout.astro';
 
 const projects: Project[] = [
-  { title: 'Project One', category: 'Web development', image: '/images/project-1.svg', href: '#' },
-  { title: 'Project Two', category: 'Applications', image: '/images/project-2.svg', href: '#' },
-  { title: 'Project Three', category: 'Open source', image: '/images/project-3.svg', href: '#' },
-  { title: 'Project Four', category: 'Web development', image: '/images/project-4.svg', href: '#' },
+  {
+    title: 'perfect-gpg-keypair',
+    category: 'CLI tools',
+    description:
+      'Interactive Go CLI that generates a passphrase-protected RSA4096 master key, a separate signing subkey for commit signing, and a revocation certificate. Finally, the tool removes the master key from the machine once backed up.',
+    image: '/images/perfect-gpg-keypair.svg',
+    href: 'https://github.com/mariuswinger/perfect-gpg-keypair',
+  },
 ];
 ---
 
