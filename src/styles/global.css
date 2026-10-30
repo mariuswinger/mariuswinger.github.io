@@ -52,3 +52,48 @@
     @apply mb-5 text-xl font-semibold;
   }
 }
+
+@layer components {
+  .prose {
+    @apply max-w-none text-muted leading-relaxed;
+  }
+  .prose :where(h2, h3, h4) {
+    @apply mt-10 mb-4 font-semibold text-text tracking-tight;
+  }
+  .prose h2 {
+    @apply text-2xl;
+  }
+  .prose h3 {
+    @apply text-xl;
+  }
+  .prose p {
+    @apply my-4;
+  }
+  .prose a {
+    @apply text-accent underline underline-offset-4 hover:text-accent-soft;
+  }
+  .prose :where(ul, ol) {
+    @apply my-4 pl-6;
+  }
+  .prose ul {
+    @apply list-disc;
+  }
+  .prose ol {
+    @apply list-decimal;
+  }
+  .prose li {
+    @apply my-1;
+  }
+  .prose :not(pre) > code {
+    @apply rounded bg-surface-2 px-1.5 py-0.5 text-sm text-text;
+  }
+  .prose pre {
+    @apply my-6 overflow-x-auto rounded-2xl border border-border p-5 text-sm;
+  }
+  .prose blockquote {
+    @apply my-6 border-l-2 border-accent pl-4 italic;
+  }
+  .prose img {
+    @apply rounded-2xl;
+  }
+}
