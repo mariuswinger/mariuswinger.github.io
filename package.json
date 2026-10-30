@@ -33,6 +33,6 @@
     "@biomejs/biome": "^2.6.4",
     "@types/mdast": "^4.0.4",
     "satteri": "^0.10.5",
-    "typescript": "6"
+    "typescript": "7"
   }
 }
