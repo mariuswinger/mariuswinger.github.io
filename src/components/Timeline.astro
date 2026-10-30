@@ -14,7 +14,10 @@ interface Props {
 }
 
 const { heading, icon, items } = Astro.props;
-const id = heading.toLowerCase().replace(/\s+/g, '-');
+const id = heading
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
 ---
 
 <section aria-labelledby={id}>

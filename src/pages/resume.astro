@@ -48,6 +48,38 @@ const education: TimelineItem[] = [
   },
 ];
 
+const courses: TimelineItem[] = [
+  {
+    title: 'Advanced Machine Learning - Equinor',
+    period: 'Mar 2025',
+    description: 'Follow-up course building on the machine learning fundamentals.',
+  },
+  {
+    title: 'Machine Learning Fundamentals - Equinor',
+    period: 'Mar 2025',
+    description:
+      'The classification problem and models for classification (primarily logistic regression). Covers the key steps in building a classification model from scratch using Python.',
+  },
+  {
+    title: 'Applying DDD & EventStorming in Modern Architecture - Bouvet',
+    period: 'Apr 2024',
+    description:
+      'Three-day course on Domain-Driven Design and EventStorming as tools for aligning software architecture with business needs.',
+  },
+  {
+    title: 'AZ-204: Developing Solutions for Microsoft Azure - Bouvet',
+    period: 'Apr 2024',
+    description:
+      'End-to-end Azure development: compute solutions and Azure Functions, storage, authentication and authorisation, securing solutions with Key Vault and Managed Identities, event- and message-based integrations, monitoring and optimisation.',
+  },
+  {
+    title: 'Implementing Modern Architecture - Bouvet',
+    period: 'Jun 2023',
+    description:
+      'Pitfalls of misapplying architecture styles, plus microservices, CQRS, hexagonal architecture, event sourcing, system stability and development quality.',
+  },
+];
+
 const skills: { level: string; items: string[] }[] = [
   {
     level: 'Daily drivers',
@@ -106,6 +138,7 @@ const skills: { level: string; items: string[] }[] = [
   <div class="space-y-12">
     <Timeline heading="Experience" icon="briefcase" items={experience} />
     <Timeline heading="Education" icon="book" items={education} />
+    <Timeline heading="Courses & Certifications" icon="certificate" items={courses} />
 
     <section aria-labelledby="skills">
       <h3 id="skills" class="subsection-title">My Skills</h3>
