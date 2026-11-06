@@ -71,6 +71,7 @@ The URL becomes `/blog/<slug>/`. Posts with `draft: true` are excluded from the 
 ## CI
 
 - `.github/workflows/on_pull_request.yaml` — lint, type-check and build on every pull request.
+- `.github/workflows/on_main.yaml` — lint, type-check and build on every push to `main`.
 - `.github/workflows/deploy.yaml` — builds and deploys to GitHub Pages; triggered manually via **Actions → Deploy to GitHub Pages → Run workflow**.
 
 ## Deployment
