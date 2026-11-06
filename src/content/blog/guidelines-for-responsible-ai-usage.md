@@ -5,6 +5,8 @@ pubDate: 2026-10-23
 tags: ['ai', 'software engineering', 'code review']
 ---
 
+> I originally wrote this for a team I was part of, but the advice applies to any team using AI tools.
+
 ## Motivation
 
 The widespread adoption of Copilot-style agents within code editors or through command line interfaces has made code generation both fast and accessible. However, software development revolves around more than just producing code; it is the process of designing, creating, testing, and maintaining software applications to meet specific user needs or business objectives (Dooley, 2017). This highlights that software projects consist of more than just their source code, which does not inherently capture intent, design decisions, architectural choices, or deliberate trade-offs. The Danish computer scientist Peter Naur conceptualised a software system as a shared mental model of how it works, why it works that way, and how it should evolve. The act of programming then becomes a form of collective, collaborative theory building (Naur, 1985). Under this view, source code is reduced to a lossy, imperfect written representation of that theory. However, the process of writing source code remains a critical part of building and developing the shared mental model.
@@ -20,9 +22,9 @@ The problem is of course not the technology in itself as the concept of cognitiv
 
 Open-source projects take wildly different approaches to remedy this. Some outright ban AI usage in contributions, while others enforce an AI usage policy. An example of such a policy can be found on the repository for the terminal emulator Ghostty. One of the main rules from that policy is "if you can't explain what your changes do and how they interact with the greater system without the aid of AI tools, do not contribute to this project" (Ghostty, 2026). The project owner of Ghostty also maintains that low-effort AI output just shifts the burden of validation onto the maintainer (Ghostty, 2026), so contributors must be able to explain any line and design decision in review. Low-effort contributions that are obviously AI generated are outright refused (Ghostty, 2026). Another example is LLVM, which names unreviewed AI output as an "extractive contribution", since it extracts more from maintainers in terms of required work than it adds in terms of value to the project. A way to make a contribution less extractive is to reduce its size or complexity, or even increase the usefulness/value (LLVM Project, 2026).
 
-Much like Ghostty and LLVM, we wish to welcome the use of AI, but in order to maintain ownership over our projects, we need sensible guidelines for how we should use the technology. These should not be read as hard, strict rules, but as a shared cultural agreement on how we wish to approach development and maintain our projects.
+Much like Ghostty and LLVM, I think we should welcome the use of AI, but keeping ownership of our projects takes sensible guidelines for how we use the technology. What follows are the ones I would argue for. They are not hard rules, but a starting point for a shared agreement within your own team.
 
-## Rules for responsible AI usage
+## Guidelines for responsible AI usage
 
 ### 1. The one rule to rule them all
 
@@ -74,12 +76,12 @@ We are all familiar with the "looks good to me" pull request trope: PRs with 100
 - **Ensure the PR is small enough:** A Cisco/SmartBear study found that the optimal range for catching defects is around 200–400 lines of code changed. Within that range, about 70–90% of defects are caught within reasonable review time. This diminishes when the size grows larger (Cohen, 2006). Google's practice strengthens this mantra: Around 100 lines of code changed is comfortable, whereas 1000 lines of code is usually too big (Google Engineering, 2024).
 - **Keep PRs focused on a single concern:** This is also advised by Google's practices (Google Engineering, 2024). Unscoped, under-documented diffs drive cognitive load up (Noda et al., 2023).
 - **Aim to separate features and refactors into separate PRs:** Although this is not always possible, it should be a goal we aim for. Intermingling feature changes and refactor changes increases the cognitive load for the reviewer, making it harder/more time demanding to review (Noda et al., 2023). Which in turn can be a blocker for the rest of the team (Noda et al., 2023). At the very least, such changes need to be in separate commits.
-- **Structure commits as logical, self-contained pieces:** This is really why we are using conventional commits, we want to keep commits atomic. Reviewing a slightly too big PR can often be way easier when doing it commit-by-commit (given that the commits are atomic).
+- **Structure commits as logical, self-contained pieces:** This is one of the main arguments for conventional commits: they push you towards keeping commits atomic. Reviewing a slightly too big PR can often be way easier when doing it commit-by-commit (given that the commits are atomic).
 - **Remove "Co-authored-by" / "Generated with" comments:** The AI tool cannot answer questions about the commits in review, so the extra information is not adding any valuable context. It can be valuable to know that a section was authored by an AI, but that is a topic for the next section.
 
 ### 6. Make the reviewer's job easier: put effort into the pull request description
 
-We should strive to make the reviewer's life easier by providing more context about the changes in the pull request description. Remember, you as an author have more context around the changes than the reviewer who might be looking at the changes for the first time (Google Engineering, 2024). We already have a pull request template markdown file in most of our projects which already adds context about why the pull request is needed (signaling intent), what the PR changes, and issues relating to the PR. A good description should communicate the following:
+We should strive to make the reviewer's life easier by providing more context about the changes in the pull request description. Remember, you as an author have more context around the changes than the reviewer who might be looking at the changes for the first time (Google Engineering, 2024). A pull request template is a good way to make this a habit, prompting for why the PR is needed, what it changes, and which issues it relates to. Whether you use one or not, a good description should communicate the following:
 
 - **Intent:** Why is the pull request needed? What problems does it solve?
 - **Overview:** What was changed? High-level description of what changes were implemented. No need to go deep into the low-level details here; we do not want a wall of text.
