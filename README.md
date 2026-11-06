@@ -66,7 +66,7 @@ The URL becomes `/blog/<slug>/`. Posts with `draft: true` are excluded from the 
 
 **Resume** — edit the `education`, `experience` and `skills` arrays in `src/pages/resume.astro`.
 
-**Profile / contact details** — edit `src/components/Sidebar.astro` and `src/pages/contact.astro`.
+**Profile / social links** — edit `src/components/Sidebar.astro`.
 
 ## CI
 

@@ -7,8 +7,6 @@ import Icon, { type IconName } from './Icon.astro';
 const profile = {
   name: FULL_NAME,
   role: 'Fullstack developer',
-  email: 'hello@example.com',
-  phone: '+47 000 00 000',
   birthday: 'November, 1990',
   location: 'Trondheim, Norway',
 };
@@ -18,14 +16,7 @@ const socials: { label: string; href: string; icon: IconName }[] = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mariuswinger', icon: 'linkedin' },
 ];
 
-const details: { icon: IconName; label: string; value: string; href?: string }[] = [
-  { icon: 'mail', label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  {
-    icon: 'phone',
-    label: 'Phone',
-    value: profile.phone,
-    href: `tel:${profile.phone.replace(/\s/g, '')}`,
-  },
+const details: { icon: IconName; label: string; value: string }[] = [
   { icon: 'calendar', label: 'Birthday', value: profile.birthday },
   { icon: 'pin', label: 'Location', value: profile.location },
 ];
@@ -54,13 +45,7 @@ const details: { icon: IconName; label: string; value: string; href?: string }[]
           </span>
           <div class="min-w-0">
             <p class="text-[0.65rem] uppercase tracking-wider text-muted">{d.label}</p>
-            {d.href ? (
-              <a href={d.href} class="block truncate text-sm hover:text-accent">
-                {d.value}
-              </a>
-            ) : (
-              <p class="truncate text-sm">{d.value}</p>
-            )}
+            <p class="truncate text-sm">{d.value}</p>
           </div>
         </li>
       ))
