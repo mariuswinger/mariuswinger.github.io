@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 
 const experience: TimelineItem[] = [
   {
-    title: 'Consultant — XLENT Trondheim',
+    title: 'Senior Systems Consultant — XLENT Trondheim',
     period: 'Nov 2026 — Present',
     description:
       'Consultant and fullstack developer with deep mathematical expertise and experience from professional software development for industrial environments.',
@@ -14,37 +14,38 @@ const experience: TimelineItem[] = [
     title: 'Consultant — Bouvet Trondheim',
     period: 'Aug 2021 — Oct 2026',
     description:
-      "Primarily on assignment at Equinor's research centre at Rotvoll as a fullstack developer. Development of research applications, code modernisation and numerical computations.",
+      "Primarily on assignment at Equinor's research centre at Rotvoll as a fullstack developer with a backend focus. Development of applications for R&D, code modernisation and numerical computations.",
   },
   {
     title: 'PhD Candidate — NTNU, Department of Teacher Education',
     period: 'Jan 2017 — Jul 2021',
     description:
-      'Research on fraction understanding among student teachers. Combined literature review, existing theory and mathematical models to conceptualise and measure understanding.',
+      'Research on fraction understanding among pre-service teachers. Combined literature review, existing theory and mathematical models to conceptualise and measure understanding. Completed the four-year fellowship; the thesis was not finished, and I moved into software development.',
   },
   {
-    title: 'University Lecturer (temporary) — NTNU, Department of Teacher Education',
+    title: 'Temporary Assistant Professor — NTNU, Department of Teacher Education',
     period: 'Aug 2016 — Feb 2017',
-    description: 'Taught introductory mathematics courses for student teachers.',
+    description: 'Taught introductory mathematics courses for pre-service teachers.',
   },
 ];
 
 const education: TimelineItem[] = [
   {
-    title: 'B.Sc. in Computer Science — NTNU',
+    title: 'Bachelor studies in Informatics — NTNU',
     period: 'Aug 2015 — Jan 2017',
     description: 'Completed the first three semesters before switching to the PhD programme.',
   },
   {
-    title: 'M.Sc. in Mathematics (Analysis) — NTNU',
+    title: "Master's degree in Mathematical Sciences — NTNU",
     period: 'Aug 2013 — Jul 2015',
     description:
-      'Thesis: "A categorical approach to Cuntz–Pimsner C*-algebras", using category theory to give a new, simple proof of a uniqueness theorem. GPA: A.',
+      'Wrote the master\'s thesis "A categorical approach to Cuntz–Pimsner C*-algebras", using category theory to give a new, simple proof of the gauge-invariant uniqueness theorem for Cuntz–Pimsner algebras. Supervised by Toke Meier Carlsen and Eduardo Ortega. Grade average A.',
   },
   {
-    title: 'B.Sc. in Mathematics — NTNU',
+    title: "Bachelor's degree in Mathematical Sciences — NTNU",
     period: 'Aug 2009 — Jul 2013',
-    description: 'Including an extra year of additional credits.',
+    description:
+      "Extended the bachelor's degree with an additional year of courses to help decide which master's programme specialisation to choose (240 ECTS in total).",
   },
 ];
 
@@ -52,31 +53,32 @@ const courses: TimelineItem[] = [
   {
     title: 'Advanced Machine Learning - Equinor',
     period: 'Mar 2025',
-    description: 'Follow-up course building on the machine learning fundamentals.',
+    description:
+      'Neural networks with TensorFlow and PyTorch: backpropagation, gradient descent and tuning.',
   },
   {
     title: 'Machine Learning Fundamentals - Equinor',
     period: 'Mar 2025',
     description:
-      'The classification problem and models for classification (primarily logistic regression). Covers the key steps in building a classification model from scratch using Python.',
+      'Classification with logistic regression, building a model from scratch in Python.',
   },
   {
     title: 'Applying DDD & EventStorming in Modern Architecture - Bouvet',
     period: 'Apr 2024',
     description:
-      'Three-day course on Domain-Driven Design and EventStorming as tools for aligning software architecture with business needs.',
+      'Domain-Driven Design (DDD) and EventStorming for aligning architecture with business needs.',
   },
   {
     title: 'AZ-204: Developing Solutions for Microsoft Azure - Bouvet',
     period: 'Apr 2024',
     description:
-      'End-to-end Azure development: compute solutions and Azure Functions, storage, authentication and authorisation, securing solutions with Key Vault and Managed Identities, event- and message-based integrations, monitoring and optimisation.',
+      'Azure Developer Associate curriculum: compute, storage, security, integration and monitoring.',
   },
   {
     title: 'Implementing Modern Architecture - Bouvet',
     period: 'Jun 2023',
     description:
-      'Pitfalls of misapplying architecture styles, plus microservices, CQRS, hexagonal architecture, event sourcing, system stability and development quality.',
+      'Microservices, CQRS, hexagonal architecture, event sourcing and common architecture pitfalls.',
   },
 ];
 
@@ -92,10 +94,8 @@ const skills: { level: string; items: string[] }[] = [
       'GitHub Actions',
       'REST APIs',
       'TypeScript',
-      'Mathematics',
-      'Numpy',
-      'Communication',
       'React',
+      'NumPy',
     ],
   },
   {
@@ -104,30 +104,28 @@ const skills: { level: string; items: string[] }[] = [
       'Kubernetes',
       'Microsoft Azure',
       'MongoDB',
+      'Numerical methods',
+      'Cloud architecture',
       'Clean architecture',
       'Domain-driven design',
       'Software testing',
       'Agile development',
       'OAuth',
-      'Security',
+      'Dependency management',
+      'Security scanning (GHAS)',
+      'Linux',
+      'Bash',
+      'Lua',
+      '.NET',
+      'C#',
+      'MATLAB',
       'AI agents',
       'AI-assisted development',
     ],
   },
   {
     level: 'Some experience',
-    items: [
-      'Go',
-      'Rust',
-      'lua',
-      '.NET',
-      'C#',
-      'Fortran',
-      'C++',
-      'MATLAB',
-      'AI & machine learning',
-      'Cloud architecture',
-    ],
+    items: ['Go', 'Rust', 'Fortran', 'C++'],
   },
 ];
 ---
